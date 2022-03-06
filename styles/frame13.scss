@@ -2,15 +2,17 @@
       $Shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2),
       0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-  p {
-      font-family:$MainFont;
-        color: #818181;
-        text-align: center;
-        animation: pmove 3s alternate ease-in-out;
-        -webkit-animation: pmove 3s alternate ease-in-out;
-    }
-   
+  
 .container {
+  p {
+    font-family:$MainFont;
+      color: #818181;
+      text-align: center;
+      animation: pmove 3s alternate ease-in-out;
+      -webkit-animation: pmove 3s alternate ease-in-out;
+    
+  }
+  
     flex-direction: column;
     align-items: center;
     width: fit-content;
@@ -30,12 +32,13 @@
         border-radius: 100px;
         margin: 10px 0;
         cursor: pointer;
+        
         -moz-box-shadow: 5px 5px 10px rgb(177, 177, 177);
         -webkit-box-shadow: 5px 5px 10px rgb(177, 177, 177);
         box-shadow: 5px 5px 10px rgb(177, 177, 177);
             &:nth-child(1) {
               animation: labelmove 1.5s alternate ease-in;
-              -webkit-animation: labelmove 1.5s alternate ease-in;
+              -webkit-animation: labelmove 1.5s alternate ease-in;  ;
             }
             &:nth-child(2) {
               animation: labelmove 2s alternate ease-in;
@@ -93,16 +96,14 @@
           color: #6231ec;
           margin: 0 0 0 14px;
           font-size: 12px;
-          font-weight: 100;
           transition: 0.3s;
+          font-weight: 700;
         }
     }
    
     .innerDiv { 
-      animation: mymove 8s alternate ease-in-out;
-      -webkit-animation: mymove 8s alternate ease-in-out;
-      // animation: name duration timing-function delay iteration-count direction fill-mode;
-  
+      animation: mymove 4s alternate ease-in-out;
+      -webkit-animation: mymove 4s alternate ease-in-out;  
     }
     @keyframes pmove {
       from {
