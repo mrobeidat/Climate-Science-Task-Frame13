@@ -1,6 +1,10 @@
       $MainFont:Verdana, Geneva, Tahoma, sans-serif;
       $Shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2),
       0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+
+
   p {
       font-family:$MainFont;
         color: #818181;
@@ -33,19 +37,20 @@
         -webkit-box-shadow: 5px 5px 10px rgb(177, 177, 177);
         box-shadow: 5px 5px 10px rgb(177, 177, 177);
             &:nth-child(1) {
-              animation: labelmove 2s alternate ease-in;
-              -webkit-animation: labelmove 2s alternate ease-in;
+              animation: labelmove 1s alternate ease-in;
+              -webkit-animation: labelmove 1s alternate ease-in;
             }
             &:nth-child(2) {
-              animation: labelmove 3s alternate ease-in;
-              -webkit-animation: labelmove 3s alternate ease-in;
+              animation: labelmove 1.5s alternate ease-in;
+              -webkit-animation: labelmove 1.5s alternate ease-in;
               padding: 15px 55px 15px 15px;
             }
             &:nth-child(3) {
-              animation: labelmove 4s alternate ease-in;
-              -webkit-animation: labelmove 4s alternate ease-in;
+              animation: labelmove 2s alternate ease-in;
+              -webkit-animation: labelmove 2s alternate ease-in;
               padding: 15px 55px 15px 15px;
             }   
+
         &:hover,
         &:focus-within {
             background: rgba(0, 0, 0, 0.082);
