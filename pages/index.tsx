@@ -14,7 +14,6 @@ export default function Frame13() {
 
     return (
         <>
-
         <div className="frame">
          <div className="container">
                 <p>Which of the below statements
