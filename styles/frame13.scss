@@ -1,200 +1,180 @@
-      $MainFont:Verdana, Geneva, Tahoma, sans-serif;
-      $Shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2),
-      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+$MainFont: Verdana, Geneva, Tahoma, sans-serif;
+$Shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-  
 .container {
   p {
-    font-family:$MainFont;
-      color: #818181;
-      text-align: center;
-      animation: pmove 3s alternate ease-in-out;
-      -webkit-animation: pmove 3s alternate ease-in-out;
-    
+    font-family: $MainFont;
+    color: #818181;
+    text-align: center;
+    animation: pmove 3s alternate ease-in-out;
+    -webkit-animation: pmove 3s alternate ease-in-out;
   }
-  
-    flex-direction: column;
+
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  padding: 20px;
+  box-shadow: $Shadow;
+  border-radius: 50px;
+
+  .rad-label {
+    font-family: $MainFont;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     width: fit-content;
-    padding: 20px;
-    box-shadow:$Shadow;
-    border-radius: 50px;
-   
-    .rad-label {
-        font-family: $MainFont;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        width: fit-content;
-        padding: 15px 15px 15px 15px;
-        height: fit-content;
-        border-radius: 100px;
-        margin: 10px 0;
-        cursor: pointer;
-        
-        -moz-box-shadow: 5px 5px 10px rgb(177, 177, 177);
-        -webkit-box-shadow: 5px 5px 10px rgb(177, 177, 177);
-        box-shadow: 5px 5px 10px rgb(177, 177, 177);
-            &:nth-child(1) {
-              animation: labelmove 1.5s alternate ease-in;
-              -webkit-animation: labelmove 1.5s alternate ease-in;  ;
-            }
-            &:nth-child(2) {
-              animation: labelmove 2s alternate ease-in;
-              -webkit-animation: labelmove 2s alternate ease-in;
-              padding: 15px 55px 15px 15px;
-            }
-            &:nth-child(3) {
-              animation: labelmove 2.5s alternate ease-in;
-              -webkit-animation: labelmove 2.5s alternate ease-in;
-              padding: 15px 55px 15px 15px;
-            }   
+    padding: 15px 15px 15px 15px;
+    height: fit-content;
+    border-radius: 100px;
+    margin: 10px 0;
+    cursor: pointer;
 
-        &:hover,
-        &:focus-within {
-            background: rgba(0, 0, 0, 0.082);
-        }
+    -moz-box-shadow: 5px 5px 10px rgb(177, 177, 177);
+    -webkit-box-shadow: 5px 5px 10px rgb(177, 177, 177);
+    box-shadow: 5px 5px 10px rgb(177, 177, 177);
+    &:nth-child(1) {
+      animation: labelmove 1.5s alternate ease-in;
+      -webkit-animation: labelmove 1.5s alternate ease-in;
+    }
+    &:nth-child(2) {
+      animation: labelmove 2s alternate ease-in;
+      -webkit-animation: labelmove 2s alternate ease-in;
+      padding: 15px 55px 15px 15px;
+    }
+    &:nth-child(3) {
+      animation: labelmove 2.5s alternate ease-in;
+      -webkit-animation: labelmove 2.5s alternate ease-in;
+      padding: 15px 55px 15px 15px;
+    }
 
-        input{
-          opacity: 0;
-          
-          &:checked + &::before {
-            transform: scale(0);
-          }
+    &:hover,
+    &:focus-within {
+      background: rgba(0, 0, 0, 0.082);
+    }
 
-          &:checked ~ .rad-text {
-            color: hsl(0, 0%, 8%);
-          }
-        }
+    input {
+      opacity: 0;
 
-        .rad-design {
-          width: 13px;
-          height: 12px;
-          border-radius: 100px;
-          background: #6231ec;
-          position: relative;
+      &:checked + &::before {
+        transform: scale(0);
+      }
 
-              &::before {
-                content: "";
-                display: inline-block;
-                width: inherit;
-                height: inherit;
-                border-radius: inherit;
-                background: rgb(255, 255, 255);
-                transform: scale(1.1);
-                transition: 0.3s;
-                border: solid #6231ec;
-            }
+      &:checked ~ .rad-text {
+        color: hsl(0, 0%, 8%);
       }
-          .rad-input:checked + .rad-design::before {
-          transform: scale(0);
-         }
+    }
 
-         .rad-text {
-          font-family: Verdana, Geneva, Tahoma, sans-serif;
-          color: #6231ec;
-          margin: 0 0 0 14px;
-          font-size: 12px;
-          transition: 0.3s;
-          font-weight: 700;
-        }
-    }
-   
-    .innerDiv { 
-      animation: mymove 4s alternate ease-in-out;
-      -webkit-animation: mymove 4s alternate ease-in-out;  
-    }
-    @keyframes pmove {
-      from {
-          opacity: 0.3;
-      }
-      to {
-          opacity: 0.8;
-      }
-      to {
-          opacity: 1;
+    .rad-design {
+      width: 13px;
+      height: 12px;
+      border-radius: 100px;
+      background: #6231ec;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+        background: rgb(255, 255, 255);
+        transform: scale(1.1);
+        transition: 0.3s;
+        border: solid #6231ec;
       }
     }
-    @-webkit-keyframes pmove {
-     from {
-          opacity: 0.5;
-      }
-      to {
-          opacity: 0.7;
-      }
-      to {
-          opacity: 1;
-      }
+    .rad-input:checked + .rad-design::before {
+      transform: scale(0);
     }
-    
-    @keyframes mymove {
-      from {
-        opacity: 0;
-    
-      }
-      to {
-          
-          opacity: 0.5;
-      }
-      to {
-    
-        opacity: 1;
-      }
-      
+
+    .rad-text {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: #6231ec;
+      margin: 0 0 0 14px;
+      font-size: 12px;
+      transition: 0.3s;
+      font-weight: 700;
     }
-    
-    @-webkit-keyframes mymove {
-      from {
-          opacity: 0;
-      }
-      to {
-          opacity: 0.5;
-      }
-      to {
-          opacity: 1;
-      }
+  }
+
+  .innerDiv {
+    animation: mymove 4s alternate ease-in-out;
+    -webkit-animation: mymove 4s alternate ease-in-out;
+  }
+  @keyframes pmove {
+    from {
+      opacity: 0.3;
     }
-      @-webkit-keyframes labelmove {
-      from {
-        opacity: 0;
-        transform: translateY(150px);
-      }
-      to {
-         transform: translateY(75px);
-          opacity: 0.5;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
+    to {
+      opacity: 0.8;
     }
-    
-    
-    @keyframes labelmove {
-      from {
-        opacity: 0;
-        transform: translateY(150px);
-      }
-      to {
-         transform: translateY(75px);
-          opacity: 0.5;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
+    to {
+      opacity: 1;
     }
-    
-    
-      
+  }
+  @-webkit-keyframes pmove {
+    from {
+      opacity: 0.5;
+    }
+    to {
+      opacity: 0.7;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes mymove {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.5;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes mymove {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.5;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes labelmove {
+    from {
+      opacity: 0;
+      transform: translateY(150px);
+    }
+    to {
+      transform: translateY(75px);
+      opacity: 0.5;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes labelmove {
+    from {
+      opacity: 0;
+      transform: translateY(150px);
+    }
+    to {
+      transform: translateY(75px);
+      opacity: 0.5;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 }
-  
-  
-  
- 
-  
-
-
-
-
